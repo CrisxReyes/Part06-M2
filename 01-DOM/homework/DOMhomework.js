@@ -66,10 +66,6 @@ function buildToDo(todo, index) {
   toDoShell.className = 'toDoShell';
   let toDoText = document.createElement('span');
   toDoText.innerHTML = todo.description;
-  //toDoText.id = index;
-  /*toDoText.addEventListener('click', function(event){
-    return completeToDo(event);
-  })*/
   if(todo.complete){
     toDoText.className = 'completeText';
     check.checked = true;
