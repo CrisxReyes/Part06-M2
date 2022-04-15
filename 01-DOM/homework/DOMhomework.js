@@ -55,6 +55,7 @@ ToDo.prototype.completeToDo = function(){
 
 function buildToDo(todo, index) {
   // Tu código acá:
+  //agrega checkbox
   let check = document.createElement('input');
   check.type = 'checkbox';
   check.className = 'completeCheckbox';
