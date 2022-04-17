@@ -81,7 +81,19 @@ var matchFunctionMaker = function(selector) {
 };
 
 var $ = function(selector) {
-  var elements;
+  var elements = [];
+  if(selector.includes('>')){
+    let [tag1, tag2] = selector.split(' > ');
+    var matchfuncion = matchFunctionMaker(tag1);
+    var matchfuncion2 = matchFunctionMaker(tag2);
+    let elementos1 = traverseDomAndCollectElements(matchfuncion);
+    for(let i = 0; i < elementos1.length; i++) {
+      let elementos2 = traverseDomAndCollectElements(matchfuncion2, elementos1[i]);
+      elements = [...elements, ...elementos2];
+    }
+    console.log(elements);
+    return elements;
+  }
   var selectorMatchFunc = matchFunctionMaker(selector);
   elements = traverseDomAndCollectElements(selectorMatchFunc);
   return elements;
