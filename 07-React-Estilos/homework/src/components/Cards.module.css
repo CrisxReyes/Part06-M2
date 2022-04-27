@@ -1,0 +1,4 @@
+.tarjetas {
+    display: flex;
+    justify-content: space-around;
+}

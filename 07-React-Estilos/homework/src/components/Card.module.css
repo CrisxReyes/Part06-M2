@@ -1,0 +1,38 @@
+.contorno {
+    border: 2px solid;
+    border-color: #afb9c2;
+    display: inline-flex;
+    flex-direction: row;
+    padding: 20px, 20px, 20px;
+}
+
+.boton {
+    background-color: #d11919;
+    color: rgb(255, 251, 250);
+    font-size: 20px;
+    border: transparent;
+    border-radius: 10%;
+    display: flex; 
+    margin-left: 100%;
+    margin-top: 0%;
+}
+
+.boton:hover { 
+    background-color: red;
+}
+
+.tabla {
+    border-collapse: separate;
+    border-spacing: 35px 11px;
+}
+
+.tabla:hover { 
+    background-color: #afb9c2;    
+    font-size: 18px;
+    border-spacing: 33px 11px;
+}
+
+.ciudad {
+    font-size: 24px;
+    letter-spacing: 10px;
+}

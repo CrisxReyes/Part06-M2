@@ -1,0 +1,19 @@
+.input {
+    border-radius: 7px;
+    border-color: #afb9c2;
+    background-color:#dde4e9; 
+}
+
+.agregar {
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.agregar:hover {
+    background-color: rgb(98, 101, 102);
+    color: white;
+}
+
+.searchbar {
+    padding-bottom: 10px;
+}
