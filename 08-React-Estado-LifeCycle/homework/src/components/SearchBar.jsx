@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React from 'react';
+import s from  './SearchBar.module.css';
 
 export default function SearchBar({onSearch}) {
+  // acá va tu código
   return (
-    <form onSubmit={(e) => {
+    <form className= {s.searchbar} onSubmit={(e) => {
       e.preventDefault();
       onSearch("Cairns");
     }}>
-      <input
+      <input className= {s.input}
         type="text"
         placeholder="Ciudad..."
       />
-      <input type="submit" value="Agregar" />
+      <input className = {s.agregar} type="submit" value="Agregar" />
     </form>
-  );
-}
+  )
+};
