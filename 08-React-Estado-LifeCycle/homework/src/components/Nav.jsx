@@ -6,13 +6,11 @@ import './Nav.css';
 function Nav({onSearch}) {
   return (
     <div>
-      <nav class="navbar">
-        <div class="container-fluid">
+      <nav className="navbar">
+        <div className="container-fluid">
           <img src={Logo} alt="Henry"></img>
-          <a class="name">Weather App</a>
-          <form>
-              <SearchBar onSearch={onSearch}/>
-          </form>
+          <h1 className="name">Weather App</h1>
+          <SearchBar onSearch={onSearch}/>
         </div>
       </nav>
     </div>
