@@ -8,7 +8,7 @@ export default function SearchBar({onSearch}) {
   return (
     <form className= {s.searchbar} onSubmit={(e) => {
       e.preventDefault();
-      onSearch({entradas});
+      onSearch(entradas);
     }}>
       <input className= {s.input}
         type="text"

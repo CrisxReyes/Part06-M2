@@ -9,7 +9,7 @@ export default function App() {
   function onSearch(ciudad) {
     //Acá habría que hacer el llamado a la API para obtener los datos de la ciudad
     //pero de momento agregaremos una ciudad por default para ver que funcione
-    const apiKey = '4ae2636d8dfbdc3044bede63951a019b';
+    const apiKey = '31c782686fbddfb9fe89138a81966577';
 
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric`)
     .then(r => r.json())
@@ -35,10 +35,15 @@ export default function App() {
     });
   }
 
+  function onClose(id) {
+    console.log(id);
+    setCities(oldCities => oldCities.filter(c => c.id !== id));
+  }
+
   return (
     <div className="App">
       <Nav onSearch={onSearch}/>
-      <Cards cities={cities} />
+      <Cards cities={cities} onClose={onClose}/>
     </div>
   )
 }

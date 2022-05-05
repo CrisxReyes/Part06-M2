@@ -1,5 +1,10 @@
 .tarjetas {
     margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template: 300px 250px 200px 150px / 30% 40% 30%;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    /*justify-content: center;*/
 }
