@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import s from './Card.module.css'
 
 export default function Card(props) {
@@ -18,7 +19,9 @@ export default function Card(props) {
         </thead>
         <tbody>
           <tr>
-            <th className= {s.ciudad} colSpan="3">{props.name}</th>
+            <Link to={`/ciudad/${props.id}`}>
+              <th className= {s.ciudad} colSpan="3">{props.name}</th>
+            </Link>
           </tr>
           <tr>
             <td>Min</td>
