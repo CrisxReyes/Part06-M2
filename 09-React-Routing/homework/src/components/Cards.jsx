@@ -1,19 +1,20 @@
 import React from 'react';
-import './Cards.css';
+import Card from './Card';
+import s from './Cards.module.css'
 
-import Card from './Card.jsx';
-
-export default function Cards({cities, onClose}) {
+export default function Cards(props) {
+  // acá va tu código
+  // tip, podés usar un map
   return (
-    <div className='cards'>
-      {cities.map(c => <Card
-          key={c.id}
-          max={c.max}
-          min={c.min}
-          name={c.name}
-          img={c.img}
-          onClose={() => onClose(c.id)}
-        /> )}
+    <div className= {s.tarjetas}>
+      {props.cities.map((ciudad) => (
+        <Card max={ciudad.max}
+          min={ciudad.min}
+          name={ciudad.name}
+          img={ciudad.img}
+          id={ciudad.id}
+          onClose={() => props.onClose(ciudad.id)} />
+      ))}
     </div>
-  );
-}
+  ) 
+};

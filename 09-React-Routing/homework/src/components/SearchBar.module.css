@@ -1,0 +1,21 @@
+.input {
+    border-radius: 7px;
+    border-color: #afb9c2;
+    background-color:#fbfcfd; 
+}
+
+.agregar {
+    border-radius: 7px;
+    margin-left: 10px;
+    background-color: rgb(98, 101, 102);
+    color: rgb(245, 230, 147);
+}
+
+.agregar:hover {
+    background-color: rgb(225, 226, 202);
+    color: rgb(26, 25, 24);
+}
+
+.searchbar {
+    padding-bottom: 10px;
+}
