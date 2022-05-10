@@ -1,6 +1,6 @@
 const { createStore } = require('redux');
 const contador = require('./reducer');
-const { incremento, decremento } = require('./actions');
+const { incremento, decremento, impar, async } = require('./actions');
 
 // En esta linea creamos nuestro store. Pasandole como parametro nuestro Reducer
 const store = createStore(contador);
@@ -39,3 +39,12 @@ const decrement = document.getElementById('decremento');
 decrement.onclick = () => {
   return store.dispatch(decremento());
 }
+
+const numimpar = document.getElementById('incrementoImpar');
+numimpar.onclick = () => {
+  return store.dispatch(impar());
+}
+
+const incasync = document.getElementById('incrementoAsync');
+incasync.onclick = () => setTimeout(() => store.dispatch(async()), 3000);
+
