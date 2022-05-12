@@ -17,8 +17,14 @@ export function addMovieFavorite(payload) {
     };
   }
 
-  export function getMovieDetail(payload) {
-    return { type: GET_MOVIE_DETAIL, payload};
+  export function getMovieDetail(id) {
+    return function(dispatch) {
+      return fetch("http://www.omdbapi.com/?apikey=b1d4d970&i=" + id)
+        .then(response => response.json())
+        .then(json => {
+          dispatch({ type: GET_MOVIE_DETAIL, payload: json });
+        });
+    };
   }
 
   export function removeMovieFavorite(payload) {

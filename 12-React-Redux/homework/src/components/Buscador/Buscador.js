@@ -42,8 +42,10 @@ export class Buscador extends Component {
             {this.props.movies.map(movie =>{
               return(
                 <li key={movie.imdbID}>
-                 {movie.Title}
-                 <button onClick={() => this.props.addMovieFavorite({Title: movie.Title, ID: movie.imdbID})}>
+                 <Link to={`/movie/${movie.imdbID}`}>
+                  {movie.Title}
+                 </Link>
+                 <button onClick={() => this.props.addMovieFavorite({title: movie.Title, id: movie.imdbID})}>
                   Añadir a Favoritas
                  </button>
               </li> 

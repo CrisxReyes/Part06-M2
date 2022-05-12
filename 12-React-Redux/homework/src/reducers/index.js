@@ -26,7 +26,7 @@ const initialState = {
     if(action.type === "REMOVE_MOVIE_FAVORITE") {
         return {
           ...state,
-          moviesFavourites: state.moviesFavourites.filter(movie => movie.id !== action.payload)
+          moviesFavourites: state.moviesFavourites.filter(movie => movie.id !== action.payload.id)
         }
     }
     return state;
