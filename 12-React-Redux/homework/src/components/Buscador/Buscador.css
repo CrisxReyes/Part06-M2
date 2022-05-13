@@ -13,3 +13,27 @@
 .label {
     padding-right: 10px;
 }
+
+.lista-busqueda {
+    line-height: 2.5;
+}
+
+ul li {
+    padding-left: 2rem;
+    list-style-type: none;
+    background-image: url('../../pelicula.png');
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+}
+
+.pelicula {
+    display: flex;
+    justify-content:space-between;
+    padding-right: 600px;
+}
+
+.links {
+    color: white;
+}
+
