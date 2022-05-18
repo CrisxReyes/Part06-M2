@@ -1,7 +1,7 @@
-export const GET_ALL_POSTS = 'GET_ALL_POSTS';
-export const GET_ALL_USERS = 'GET_ALL_USERS';
-export const GET_ALL_USERS_POST = 'GET_ALL_USERS_POST';
-export const GET_ALL_COMMENTS_POST = 'GET_ALL_COMMENTS_POST';
+const GET_ALL_POSTS = 'GET_ALL_POSTS';
+const GET_ALL_USERS = 'GET_ALL_USERS';
+const GET_ALL_USERS_POST = 'GET_ALL_USERS_POST';
+const GET_ALL_COMMENTS_POST = 'GET_ALL_COMMENTS_POST';
 
 export function getAllUsers(){
     return function(dispatch){
