@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { getAllPosts } from "../../actions";
 
 import './Buscador.css';
 
@@ -43,11 +44,32 @@ export class Buscador extends Component {
         <div className="details">
              <h4 className="title">Posts </h4>
                 <div className= "card">
-      
+                    {this.props.posts.map((post) =>{
+                      <div>
+                        <h1>{post.title}</h1>
+                        <p>{post.body}</p>
+                      </div>
+                    })}
                   </div>
             </div>
       </div>
     );
   }
 }
-export default Buscador;
+
+function mapStateToProps(state) {
+  return {
+      posts: state.posts,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+      getAllPosts: () => dispatch(getAllPosts())
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Buscador)
