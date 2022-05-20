@@ -20,7 +20,9 @@ export class Users extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.users.map((user) =>{
+            {console.log(this)}
+            {this.props.users?.map((user) => {
+              return(
               <tr>
                 <td>{user.name}</td>
                 <td>{user.username}</td>
@@ -28,6 +30,7 @@ export class Users extends Component {
                   <Link to={`/users/${user.id}/posts`} className="button">Posts</Link>
                 </td>
               </tr>
+              )
             })}
           </tbody>
         </table>
@@ -36,13 +39,13 @@ export class Users extends Component {
   }
 }
 
-function mapStateToProps(state) {
+export function mapStateToProps(state) {
   return {
     users: state.users
   };
 }
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   return {
     getAllUsers: () => dispatch(getAllUsers())
   };

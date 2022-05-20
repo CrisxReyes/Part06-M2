@@ -52,7 +52,7 @@ export function mapDispatchToProps(dispatch) {
     };
   }
   
-  export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(CommentsPost);
+export default connect(
+   mapStateToProps,
+  mapDispatchToProps
+)(CommentsPost)

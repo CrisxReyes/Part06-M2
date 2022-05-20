@@ -4,7 +4,7 @@ import Logo from '../../logoHenry.png'
 
 import './Navbar.css';
 
-export default function NavBar() {
+function NavBar() {
     return (
         <header className="navbar">
             <div>
@@ -25,3 +25,5 @@ export default function NavBar() {
         </header>
     )
 }
+
+export default NavBar;

@@ -44,11 +44,13 @@ export class Buscador extends Component {
         <div className="details">
              <h4 className="title">Posts </h4>
                 <div className= "card">
-                    {this.props.posts.map((post) =>{
+                    {this.props.posts.map((post) => {
+                      return(
                       <div>
                         <h1>{post.title}</h1>
                         <p>{post.body}</p>
                       </div>
+                      )
                     })}
                   </div>
             </div>
@@ -57,13 +59,13 @@ export class Buscador extends Component {
   }
 }
 
-function mapStateToProps(state) {
+export function mapStateToProps(state) {
   return {
       posts: state.posts,
   };
 }
 
-function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch) {
   return {
       getAllPosts: () => dispatch(getAllPosts())
   };
