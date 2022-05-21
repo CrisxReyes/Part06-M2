@@ -4,9 +4,11 @@ export const GET_ALL_USERS_POST = 'GET_ALL_USERS_POST';
 export const GET_ALL_COMMENTS_POST = 'GET_ALL_COMMENTS_POST';
 
 export function getAllUsers(){
-    return (dispatch) => fetch("https://jsonplaceholder.typicode.com/users")
-        .then(response => response.json())
-        .then(json => dispatch({ type: GET_ALL_USERS, payload: json }));
+    return function (dispatch) {
+        return fetch("https://jsonplaceholder.typicode.com/users")
+            .then(response => response.json())
+            .then(json => dispatch({ type: GET_ALL_USERS, payload: json }));
+    };
 }
 
 export function getAllUserPosts(id){
