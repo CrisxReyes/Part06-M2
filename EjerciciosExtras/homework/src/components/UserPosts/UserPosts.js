@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './UserPosts.css';
 import { getAllUserPosts } from '../../actions/index';
-import { CommentsPost } from '../CommentsPost/CommentsPost';
+import CommentsPost  from '../CommentsPost/CommentsPost';
 
 export class UserPosts extends Component {
   componentDidMount(){
@@ -11,10 +11,10 @@ export class UserPosts extends Component {
   }
 
   render() {
-   
+   console.log(this.props)
     return (
       <div className="details">
-        <h4 className="title">{`Posts del usuario ${this.props.posts.userId}`}</h4>
+        <h4 className="title">{`Posts del usuario ${this.props.match.params.id}`}</h4>
         {this.props.userPosts.map(post => {
           return(
           <div className="post" key={post.id}>

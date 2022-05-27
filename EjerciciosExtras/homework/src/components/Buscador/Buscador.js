@@ -5,6 +5,9 @@ import { getAllPosts } from "../../actions";
 import './Buscador.css';
 
 export class Buscador extends Component {
+  componentDidMount(){
+    this.props.getAllPosts();
+  }
 
   handleSubmit(event) {
     event.preventDefault();

@@ -5,6 +5,9 @@ import { getAllUsers } from '../../actions/index';
 import './Users.css';
 
 export class Users extends Component {
+  componentDidMount(){
+    this.props.getAllUsers();
+  }
 
   render() {
     return (
@@ -20,8 +23,7 @@ export class Users extends Component {
             </tr>
           </thead>
           <tbody>
-            {console.log(this)}
-            {this.props.users?.map((user) => {
+            {this.props.users.map((user) => {
               return(
               <tr>
                 <td>{user.name}</td>
